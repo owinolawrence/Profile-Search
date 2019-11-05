@@ -8,18 +8,12 @@
             <h1>Github Search Profile</h1>
         </div>
         <div class="col-md-6">
-            <!-- <form action="" class="search-form">
-                <div class="form-group">
-                    <input type="text" class="form-control mr-10" placeholder="Search git users with username"
-                        [(ngModel)]="username" name="username" (keyup)="findProfile()">
-                    <button type="submit" class="btn btn-dark" (click)="search">Search</button>
-                </div>
-            </form> -->
+            
             <div class="card">
     <div class="card-body">
         <form action="" class="search-form">
             <div class="form-group">
-                <input type="text" class="form-control mr-10" placeholder="Search git users with username"
+                <input type="text" class="form-control mr-10" placeholder="Enter username"
                     [(ngModel)]="username" name="username" (keyup)="findProfile()">
                     <button type="submit" class="btn btn-dark" (click) ="search">Search</button>
             </div>
@@ -52,14 +46,9 @@
                         <ul class="list-group">
 
                             <li class="list-group-item" *ngIf="profile.bio">{{profile.name}}</li>
-                            <!-- <li class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}"> -->
-                            <!-- {{profile.email}}</a></li> -->
+                            
                             <li class="list-group-item" *ngIf="profile.location">{{profile.location}}</li>
-                            <!-- <li class="list-group-item" *ngIf="profile.blog"><a href="{{profile.blog}}" -->
-                            <!-- target=" _blank">{{profile.blog}}</a></li> -->
-                            <!-- <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li> -->
-                            <!-- <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li> -->
-                        </ul>
+                            </ul>
                     </div>
                 </div>
 

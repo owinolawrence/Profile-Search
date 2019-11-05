@@ -9,6 +9,7 @@ import { ProfileService } from './profile.service';
 import { from } from 'rxjs';
 import { GithubFormComponent } from './github-form/github-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ProfileComponent,
     GithubFormComponent,
     NavbarComponent,
+    DateCountPipe,
 
 
   ],

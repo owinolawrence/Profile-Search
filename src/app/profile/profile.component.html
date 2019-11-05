@@ -1,55 +1,78 @@
 <link href="https://fonts.googleapis.com/css?family=Srisakdi&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Srisakdi&display=swap" rel="stylesheet">
 
-<form action="" class="search-form">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username"
-                name="username" (keyup)="findProfile()">
+
+<div class="card">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Github Search Profile</h1>
         </div>
-    </form>
+        <div class="col-md-6">
+            <!-- <form action="" class="search-form">
+                <div class="form-group">
+                    <input type="text" class="form-control mr-10" placeholder="Search git users with username"
+                        [(ngModel)]="username" name="username" (keyup)="findProfile()">
+                    <button type="submit" class="btn btn-dark" (click)="search">Search</button>
+                </div>
+            </form> -->
+            <div class="card">
+    <div class="card-body">
+        <form action="" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control mr-10" placeholder="Search git users with username"
+                    [(ngModel)]="username" name="username" (keyup)="findProfile()">
+                    <button type="submit" class="btn btn-dark" (click) ="search">Search</button>
+            </div>
+        </form>
+    </div>
+</div>  
+        </div>
+    </div>
+</div>
+
 <div class="container-fluid">
     <div class="jumtron">
-<div *ngIf="profile">
-    
-        <div class="card">
+        <div *ngIf="profile">
 
-            <h1>{{profile.name}} <small>{{profile.login}}</small></h1>
-            
-        </div>
+            <div class="card">
 
-       
-        <div class="panel-body">
-            <div class="row">
-                    <div class="card">
-                <div class="col-md-6">
-                    <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
+                <h1>{{profile.name}} <small>{{profile.login}}</small></h1>
 
-                
-                   
-                    <ul class="list-group">
-
-                        <li class="list-group-item" *ngIf="profile.bio">{{profile.name}}</li>
-                        <!-- <li class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}"> -->
-                                <!-- {{profile.email}}</a></li> -->
-                        <li class="list-group-item" *ngIf="profile.location">{{profile.location}}</li>
-                        <!-- <li class="list-group-item" *ngIf="profile.blog"><a href="{{profile.blog}}" -->
-                                <!-- target=" _blank">{{profile.blog}}</a></li> -->
-                        <!-- <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li> -->
-                        <!-- <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li> -->
-                    </ul>
-                </div>
             </div>
-                
+
+
+
+            <div class="row">
+                <div class="card">
+                    <div class="col-md-6">
+                        <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
+
+
+
+                        <ul class="list-group">
+
+                            <li class="list-group-item" *ngIf="profile.bio">{{profile.name}}</li>
+                            <!-- <li class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}"> -->
+                            <!-- {{profile.email}}</a></li> -->
+                            <li class="list-group-item" *ngIf="profile.location">{{profile.location}}</li>
+                            <!-- <li class="list-group-item" *ngIf="profile.blog"><a href="{{profile.blog}}" -->
+                            <!-- target=" _blank">{{profile.blog}}</a></li> -->
+                            <!-- <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li> -->
+                            <!-- <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li> -->
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="col-md-6">
                     <div>
                         <div class="card">
-                        <p>
-                            <span class="label label-default">{{profile.followers}} Followers</span>
-                            <span class="label label-primary">{{profile.following}} Following</span>
-                            <span class="label label-success">{{profile.public_gists}} Public gists</span>
-                            <span class="label label-info">{{profile.public_repos}} Public Repos</span>
-                        </p>
-                    </div>
+                            <p>
+                                <span class="label label-default">{{profile.followers}} Followers</span>
+                                <span class="label label-primary">{{profile.following}} Following</span>
+                                <span class="label label-success">{{profile.public_gists}} Public gists</span>
+                                <span class="label label-info">{{profile.public_repos}} Public Repos</span>
+                            </p>
+                        </div>
                         <p><a href="{{profile.html_url}}" target="_ blank" class="btn btn-success btn-sm">View profile
                                 on github</a></p>
                         <div class="panel-heading">
@@ -57,18 +80,17 @@
                         </div>
                         <div class="panel-body" *ngFor="let repo of repos">
                             <div class="card">
-                            <p>
-                                {{repo.name}}<a href="{{repo.html_url}}" target="_blank"
-                                    class="btn btn-sm btn-success">View this project on github</a>
-                            </p>
-                            <p>{{repo.description}}</p>
-                        </div>
+                                <p>
+                                    {{repo.name}}<a href="{{repo.html_url}}" target="_blank"
+                                        class="btn btn-sm btn-success">View this project on github</a>
+                                </p>
+                                <p>{{repo.description}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
-</div>
-

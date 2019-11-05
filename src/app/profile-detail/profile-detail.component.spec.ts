@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GithubFormComponent } from './github-form.component';
+import { ProfileDetailComponent } from './profile-detail.component';
 
-describe('GithubFormComponent', () => {
-  let component: GithubFormComponent;
-  let fixture: ComponentFixture<GithubFormComponent>;
+describe('ProfileDetailComponent', () => {
+  let component: ProfileDetailComponent;
+  let fixture: ComponentFixture<ProfileDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GithubFormComponent ]
+      declarations: [ ProfileDetailComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GithubFormComponent);
+    fixture = TestBed.createComponent(ProfileDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

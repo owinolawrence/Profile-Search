@@ -7,17 +7,21 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from './profile.service';
 import { from } from 'rxjs';
-import { GithubFormComponent } from './github-form/github-form.component';
+// import { GithubFormComponent } from './github-form/github-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DateCountPipe } from './date-count.pipe';
+import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
+// import { GithubComponent } from './github/github.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    GithubFormComponent,
+    // GithubFormComponent,
     NavbarComponent,
     DateCountPipe,
+    ProfileDetailComponent,
+    // GithubComponent,
 
 
   ],
@@ -25,7 +29,8 @@ import { DateCountPipe } from './date-count.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]

@@ -31,7 +31,8 @@ h1:hover {
 h3 {
     font-size: 35px;
     font-family: 'Srisakdi', cursive;
-    color: white;
+    color:black;
+    text-transform: uppercase;
 }
 
 

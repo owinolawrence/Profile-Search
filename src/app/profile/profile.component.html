@@ -15,7 +15,7 @@
             <div class="form-group">
                 <input type="text" class="form-control mr-10" placeholder="Enter username"
                     [(ngModel)]="username" name="username" (keyup)="findProfile()">
-                    <button type="submit" class="btn btn-dark" (click) ="search">Search</button>
+                    <!-- <button type="submit" class="btn btn-dark" (click) ="search">Search</button> -->
             </div>
         </form>
     </div>
@@ -68,14 +68,22 @@
                             <h3 class="panel-title">Repos</h3>
                         </div>
                         <div class="panel-body" *ngFor="let repo of repos">
-                            <div class="card">
-                                <p>
-                                    {{repo.name}}<a href="{{repo.html_url}}" target="_blank"
-                                        class="btn btn-sm btn-success">View this project on github</a>
-                                </p>
-                                <p>{{repo.description}}</p>
+                                
+                        <div class="container col-sm-10card-columns">
+                                <div class="card" *ngFor="let repo of repos">
+                                    <div class="card">
+                                        <a href="{{repo.html_url}}" class="text-align-center" target="_blank" class="btn btn-outline-primary">View this project on github</a>
+                                        <br>
+                                        <br>
+                                        <div class="card-header text-center"><h3 id="rname">{{repo.name}}</h3></div>
+                                        <div class="card-body">
+                                        <p id="dec">
+                                        {{repo.description}}
+                                        </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>

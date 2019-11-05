@@ -13,7 +13,7 @@ Owino Lawrence Odhiambo
 
 ## Installation
 To view the website 
- 1 : Clone this repo : git clone (https://github.com/owinolawrence/Github.git).
+ 1 : Clone this repo : git clone (https://github.com/owinolawrence/Profile-Search.git).
  2 : Open the repo using prefered text editor e.g Visual Studio Code or Atom .
  3 : Traverse through the folder using terminal.
 

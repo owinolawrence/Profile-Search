@@ -7,11 +7,15 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from './profile.service';
 import { from } from 'rxjs';
+import { GithubFormComponent } from './github-form/github-form.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
+    GithubFormComponent,
+    NavbarComponent,
     
     
   ],

@@ -1,27 +1,27 @@
-
-<div *ngIf ="profile">
-        <div class="panel panel-default">
+<div *ngIf="profile">
+    <div class="panel panel-default">
         <div class="panel-heading">
             {{profile.name}} <small>{{profile.login}}</small>
-            
-    
+
+
         </div>
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-3">
-                   <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
-                
+                    <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
+
                 </div>
                 <div class="col md-3">
-                    <ul class="list-group"
-                    >
+                    <ul class="list-group">
 
-                    <li class="list-group-item" *ngIf="profile.bio">{{profile.name}}</li>
-                    <li class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}"> {{profile.email}}</a></li>
-                    <li class="list-group-item" *ngIf="profile.location">{{profile.location}}</li>
-                    <li class="list-group-item" *ngIf="profile.blog"><a href="{{profile.blog}}" target=" _blank">{{profile.blog}}</a></li>
-                    <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
-                    <!-- <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li> -->
+                        <li class="list-group-item" *ngIf="profile.bio">{{profile.name}}</li>
+                        <li class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}">
+                                {{profile.email}}</a></li>
+                        <li class="list-group-item" *ngIf="profile.location">{{profile.location}}</li>
+                        <li class="list-group-item" *ngIf="profile.blog"><a href="{{profile.blog}}"
+                                target=" _blank">{{profile.blog}}</a></li>
+                        <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+                        <!-- <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li> -->
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -32,15 +32,17 @@
                             <span class="label label-success">{{profile.public_gists}} Public gists</span>
                             <span class="label label-info">{{profile.public_repos}} Public Repos</span>
                         </p>
-                        <p><a href="{{profile.html_url}}" target="_ blank" class="btn btn-success btn-sm">View profile on github</a></p>
+                        <p><a href="{{profile.html_url}}" target="_ blank" class="btn btn-success btn-sm">View profile
+                                on github</a></p>
                         <div class="panel-heading">
                             <h3 class="panel-title">Repos</h3>
                         </div>
                         <div class="panel-body" *ngFor="let repo of repos">
                             <p>
-                                {{repo.name}}<a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning">View this project on github</a>
+                                {{repo.name}}<a href="{{repo.html_url}}" target="_blank"
+                                    class="btn btn-sm btn-warning">View this project on github</a>
                             </p>
-<p>{{repo.description}}</p>
+                            <p>{{repo.description}}</p>
                         </div>
                     </div>
                 </div>
@@ -48,9 +50,9 @@
         </div>
     </div>
 </div>
-    <form action="" class="search-form">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username" name="username" (keyup)="findProfile()">
-            </div>
-        </form>
-    
+<form action="" class="search-form">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username"
+            name="username" (keyup)="findProfile()">
+    </div>
+</form>

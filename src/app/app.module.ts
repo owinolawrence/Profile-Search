@@ -11,6 +11,7 @@ import { from } from 'rxjs';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DateCountPipe } from './date-count.pipe';
 import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
+import { AboutComponent } from './about/about.component';
 // import { GithubComponent } from './github/github.component';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ProfileDetailComponent } from './profile-detail/profile-detail.componen
     NavbarComponent,
     DateCountPipe,
     ProfileDetailComponent,
+    AboutComponent,
     // GithubComponent,
 
 
